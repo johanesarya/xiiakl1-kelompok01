@@ -1,0 +1,346 @@
+/*Root itu inyinya kita menyi*/
+:root {
+  --warna_dominan: #e1ad01;
+  --warna_backgorund: #02801d;
+}
+
+/* Ini Buat Reset Universal (biar ngga ada margin / padding bawaan)*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*Ini buat setting design untuk body*/
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f5f5f5;
+}
+
+/* Navbar Styles */
+.navbar {
+  background: linear-gradient(135deg, #ddaa03 30%, #069224 100%);
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.59);
+}
+
+.navbar .nav-container .logo span {
+  color: var(--warna_backgorund);
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo h2 {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  display: block;
+}
+
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  position: relative;
+  z-index: 1001;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  transition: 0.3s;
+  display: block;
+}
+
+/* Section itu isinya section yang buat home sama yang buat produk & PDF  */
+.section {
+  min-height: calc(100vh - 150px);
+  padding: 4rem 2rem;
+}
+
+/*Container juga ada di dalam home dan produk yang didalamnya ada teks*/
+.container {
+  max-width: 1200px;
+  padding: 0px auto;
+}
+
+/*Title dibagian section produk*/
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: var(--warna_dominan);
+}
+
+/* Home Section */
+#home {
+  position: relative;
+  color: white;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-image: linear-gradient(
+      135deg,
+      rgba(238, 156, 5, 0.664) 100%,
+      rgba(4, 102, 1, 0.664)
+    ),
+    url("Gambar/Sweety_landscape.png");
+  background-size: cover;
+  background-position: 0 0;
+}
+
+#home h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+#home p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 1.2rem 2.5rem;
+  background: linear-gradient(135deg, #ffd54f 40%, #ffb300);
+  color: #4b2a00;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 999px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* Product Card */
+.product-card {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  width: 100%;
+}
+
+.media-wrapper {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+  aspect-ratio: 16 / 9;
+}
+
+.media-wrapper video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.button-poster {
+  text-align: center;
+}
+
+.product-description {
+  margin-bottom: 1rem;
+}
+
+.product-description h3 {
+  color: var(--warna_dominan);
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.product-description p {
+  margin-bottom: 1rem;
+  text-align: justify;
+  line-height: 1.8;
+}
+
+.product-description ul {
+  margin-left: 2rem;
+  margin-bottom: 1rem;
+}
+
+.product-description li {
+  margin-bottom: 0.5rem;
+}
+
+/* PDF Section */
+.pdf-section {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 2px solid #e0e0e0;
+}
+
+.pdf-section h3 {
+  color: var(--warna_dominan);
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.pdf-container {
+  width: 100%;
+  height: 600px;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.326);
+}
+
+.pdf-viewer {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+.pdf-note {
+  margin-top: 1rem;
+  color: #666;
+  font-style: italic;
+  text-align: center;
+}
+
+/* Footer */
+.footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+  margin-top: 3rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .menu-toggle:checked ~ .nav-menu {
+    left: 0;
+  }
+
+  .menu-toggle:checked + .hamburger span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .menu-toggle:checked + .hamburger span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle:checked + .hamburger span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+  }
+
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    flex-direction: column;
+    background: linear-gradient(
+      135deg,
+      var(--warna_dominan) 50%,
+      var(--warna_backgorund) 100%
+    );
+    width: 100%;
+    text-align: center;
+    transition: 1s;
+    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    padding: 2rem 0;
+    gap: 0;
+  }
+
+  .nav-menu li {
+    width: 100%;
+  }
+
+  .nav-link {
+    padding: 1rem;
+    display: block;
+  }
+
+  #home h1 {
+    font-size: 2rem;
+  }
+
+  .product-card {
+    padding: 1.5rem;
+  }
+
+  .pdf-container {
+    height: 400px;
+  }
+
+  .calculation-card {
+    padding: 1.5rem;
+  }
+
+  .price-table {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-container {
+    padding: 0 1rem;
+  }
+
+  .section {
+    padding: 2rem 1rem;
+  }
+
+  .product-card {
+    padding: 1rem;
+  }
+
+  .pdf-container {
+    height: 300px;
+  }
+}
